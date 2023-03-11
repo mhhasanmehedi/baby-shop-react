@@ -6,7 +6,7 @@ function PageNotFound() {
     document.title = "404 - Baby Shop";
   }, []);
   return (
-    <div className="h-56 flex flex-col items-center justify-center">
+    <div className="h-80 flex flex-col items-center justify-center">
       <div className="text-5xl font-bold text-gray-700">
         404 - Page Not Found!
       </div>
