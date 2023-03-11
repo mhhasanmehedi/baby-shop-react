@@ -1,0 +1,340 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "title": "Pink Ponny 01",
+      "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit nean commodo ligula eget dolor. Aenean massa. Cum sociis Theme natoque penatibus et magnis dis. Etiam ultricies nisi vel augue.",
+      "price": 542,
+      "discountPercentage": 12.96,
+      "rating": 4.69,
+      "stock": 54,
+      "brand": "",
+      "category": "Babies",
+      "thumbnail": "https://cocco.qodeinteractive.com/wp-content/uploads/2018/05/shop-10-img.jpg",
+      "images": [
+        "https://cocco.qodeinteractive.com/wp-content/uploads/2018/05/shop-10-img.jpg",
+        "https://cocco.qodeinteractive.com/wp-content/uploads/2018/05/shop-10-gallery-4.jpg",
+        "https://cocco.qodeinteractive.com/wp-content/uploads/2018/05/shop-10-gallery-3.jpg",
+        "https://cocco.qodeinteractive.com/wp-content/uploads/2018/05/shop-10-gallery-2.jpg",
+        "https://cocco.qodeinteractive.com/wp-content/uploads/2018/05/shop-10-gallery-1.jpg"
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Suspender Shorts 01",
+      "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit nean commodo ligula eget dolor. Aenean massa. Cum sociis Theme natoque penatibus et magnis dis. Etiam ultricies nisi vel augue.",
+      "price": 58,
+      "discountPercentage": 12.96,
+      "rating": 4.69,
+      "stock": 54,
+      "brand": "",
+      "category": "Girls",
+      "thumbnail": "https://cocco.qodeinteractive.com/wp-content/uploads/2018/05/shop-1-img.jpg",
+      "images": [
+        "https://cocco.qodeinteractive.com/wp-content/uploads/2018/05/shop-1-img.jpg",
+        "https://cocco.qodeinteractive.com/wp-content/uploads/2018/05/shop-1-gallery-4.jpg",
+        "https://cocco.qodeinteractive.com/wp-content/uploads/2018/05/shop-1-gallery-3.jpg",
+        "https://cocco.qodeinteractive.com/wp-content/uploads/2018/05/shop-1-gallery-2.jpg",
+        "https://cocco.qodeinteractive.com/wp-content/uploads/2018/05/shop-1-gallery-1.jpg"
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Striped T-shirt",
+      "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit nean commodo ligula eget dolor. Aenean massa. Cum sociis Theme natoque penatibus et magnis dis. Etiam ultricies nisi vel augue.",
+      "price": 120,
+      "discountPercentage": 12.96,
+      "rating": 3.69,
+      "stock": 5104,
+      "brand": "",
+      "category": "Toys",
+      "thumbnail": "https://cocco.qodeinteractive.com/wp-content/uploads/2018/05/shop-11-img.jpg",
+      "images": [
+        "https://cocco.qodeinteractive.com/wp-content/uploads/2018/05/shop-11-img.jpg",
+        "https://cocco.qodeinteractive.com/wp-content/uploads/2018/05/shop-11-gallery-4.jpg",
+        "https://cocco.qodeinteractive.com/wp-content/uploads/2018/05/shop-11-gallery-3.jpg",
+        "https://cocco.qodeinteractive.com/wp-content/uploads/2018/05/shop-11-gallery-2.jpg",
+        "https://cocco.qodeinteractive.com/wp-content/uploads/2018/05/shop-11-gallery-1.jpg"
+      ]
+    },
+    {
+      "id": 4,
+      "title": "Teddy Bear 01",
+      "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit nean commodo ligula eget dolor. Aenean massa. Cum sociis Theme natoque penatibus et magnis dis. Etiam ultricies nisi vel augue.",
+      "price": 120,
+      "discountPercentage": 12.96,
+      "rating": 3.69,
+      "stock": 12,
+      "brand": "",
+      "category": "Toys",
+      "thumbnail": "https://cocco.qodeinteractive.com/wp-content/uploads/2018/05/shop-2-img.jpg",
+      "images": [
+        "https://cocco.qodeinteractive.com/wp-content/uploads/2018/05/shop-2-img.jpg",
+        "https://cocco.qodeinteractive.com/wp-content/uploads/2018/05/shop-2-gallery-4.jpg",
+        "https://cocco.qodeinteractive.com/wp-content/uploads/2018/05/shop-11-gallery-3.jpg",
+        "https://cocco.qodeinteractive.com/wp-content/uploads/2018/05/shop-2-gallery-2.jpg",
+        "https://cocco.qodeinteractive.com/wp-content/uploads/2018/05/shop-2-gallery-1.jpg"
+      ]
+    },
+    {
+      "id": 5,
+      "title": "Flamingo Charm",
+      "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit nean commodo ligula eget dolor. Aenean massa. Cum sociis Theme natoque penatibus et magnis dis. Etiam ultricies nisi vel augue.",
+      "price": 120,
+      "discountPercentage": 12.96,
+      "rating": 3.69,
+      "stock": 12,
+      "brand": "",
+      "category": "Footwear",
+      "thumbnail": "https://cocco.qodeinteractive.com/wp-content/uploads/2018/05/shop-29-img.jpg",
+      "images": [
+        "https://cocco.qodeinteractive.com/wp-content/uploads/2018/05/shop-29-img.jpg",
+        "https://cocco.qodeinteractive.com/wp-content/uploads/2018/05/shop-29-gallery-4.jpg",
+        "https://cocco.qodeinteractive.com/wp-content/uploads/2018/05/shop-29-gallery-3.jpg",
+        "https://cocco.qodeinteractive.com/wp-content/uploads/2018/05/shop-29-gallery-2.jpg",
+        "https://cocco.qodeinteractive.com/wp-content/uploads/2018/05/shop-29-gallery-1.jpg"
+      ]
+    },
+    {
+      "id": 6,
+      "title": "Pink Bag",
+      "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit nean commodo ligula eget dolor. Aenean massa. Cum sociis Theme natoque penatibus et magnis dis. Etiam ultricies nisi vel augue.",
+      "price": 120,
+      "discountPercentage": 12.96,
+      "rating": 3.69,
+      "stock": 12,
+      "brand": "",
+      "category": "Accessories",
+      "thumbnail": "https://cocco.qodeinteractive.com/wp-content/uploads/2018/05/shop-3-img-800x889.jpg",
+      "images": [
+        "https://cocco.qodeinteractive.com/wp-content/uploads/2018/05/shop-3-img-800x889.jpg",
+        "https://cocco.qodeinteractive.com/wp-content/uploads/2018/05/shop-29-gallery-4.jpg",
+        "https://cocco.qodeinteractive.com/wp-content/uploads/2018/05/shop-29-gallery-3.jpg",
+        "https://cocco.qodeinteractive.com/wp-content/uploads/2018/05/shop-29-gallery-2.jpg",
+        "https://cocco.qodeinteractive.com/wp-content/uploads/2018/05/shop-29-gallery-1.jpg"
+      ]
+    },
+    {
+      "id": 7,
+      "title": "Pink Ponny 02",
+      "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit nean commodo ligula eget dolor. Aenean massa. Cum sociis Theme natoque penatibus et magnis dis. Etiam ultricies nisi vel augue.",
+      "price": 542,
+      "discountPercentage": 12.96,
+      "rating": 4.69,
+      "stock": 54,
+      "brand": "",
+      "category": "Babies",
+      "thumbnail": "https://cocco.qodeinteractive.com/wp-content/uploads/2018/05/shop-10-img.jpg",
+      "images": [
+        "https://cocco.qodeinteractive.com/wp-content/uploads/2018/05/shop-10-img.jpg",
+        "https://cocco.qodeinteractive.com/wp-content/uploads/2018/05/shop-10-gallery-4.jpg",
+        "https://cocco.qodeinteractive.com/wp-content/uploads/2018/05/shop-10-gallery-3.jpg",
+        "https://cocco.qodeinteractive.com/wp-content/uploads/2018/05/shop-10-gallery-2.jpg",
+        "https://cocco.qodeinteractive.com/wp-content/uploads/2018/05/shop-10-gallery-1.jpg"
+      ]
+    },
+    {
+      "id": 8,
+      "title": "Suspender Shorts 02",
+      "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit nean commodo ligula eget dolor. Aenean massa. Cum sociis Theme natoque penatibus et magnis dis. Etiam ultricies nisi vel augue.",
+      "price": 58,
+      "discountPercentage": 12.96,
+      "rating": 4.69,
+      "stock": 54,
+      "brand": "",
+      "category": "Girls",
+      "thumbnail": "https://cocco.qodeinteractive.com/wp-content/uploads/2018/05/shop-1-img.jpg",
+      "images": [
+        "https://cocco.qodeinteractive.com/wp-content/uploads/2018/05/shop-1-img.jpg",
+        "https://cocco.qodeinteractive.com/wp-content/uploads/2018/05/shop-1-gallery-4.jpg",
+        "https://cocco.qodeinteractive.com/wp-content/uploads/2018/05/shop-1-gallery-3.jpg",
+        "https://cocco.qodeinteractive.com/wp-content/uploads/2018/05/shop-1-gallery-2.jpg",
+        "https://cocco.qodeinteractive.com/wp-content/uploads/2018/05/shop-1-gallery-1.jpg"
+      ]
+    },
+    {
+      "id": 9,
+      "title": "Striped T-shirt",
+      "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit nean commodo ligula eget dolor. Aenean massa. Cum sociis Theme natoque penatibus et magnis dis. Etiam ultricies nisi vel augue.",
+      "price": 120,
+      "discountPercentage": 12.96,
+      "rating": 3.69,
+      "stock": 5104,
+      "brand": "",
+      "category": "Toys",
+      "thumbnail": "https://cocco.qodeinteractive.com/wp-content/uploads/2018/05/shop-11-img.jpg",
+      "images": [
+        "https://cocco.qodeinteractive.com/wp-content/uploads/2018/05/shop-11-img.jpg",
+        "https://cocco.qodeinteractive.com/wp-content/uploads/2018/05/shop-11-gallery-4.jpg",
+        "https://cocco.qodeinteractive.com/wp-content/uploads/2018/05/shop-11-gallery-3.jpg",
+        "https://cocco.qodeinteractive.com/wp-content/uploads/2018/05/shop-11-gallery-2.jpg",
+        "https://cocco.qodeinteractive.com/wp-content/uploads/2018/05/shop-11-gallery-1.jpg"
+      ]
+    },
+    {
+      "id": 10,
+      "title": "Teddy Bear 02",
+      "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit nean commodo ligula eget dolor. Aenean massa. Cum sociis Theme natoque penatibus et magnis dis. Etiam ultricies nisi vel augue.",
+      "price": 120,
+      "discountPercentage": 12.96,
+      "rating": 3.69,
+      "stock": 12,
+      "brand": "",
+      "category": "Toys",
+      "thumbnail": "https://cocco.qodeinteractive.com/wp-content/uploads/2018/05/shop-2-img.jpg",
+      "images": [
+        "https://cocco.qodeinteractive.com/wp-content/uploads/2018/05/shop-2-img.jpg",
+        "https://cocco.qodeinteractive.com/wp-content/uploads/2018/05/shop-2-gallery-4.jpg",
+        "https://cocco.qodeinteractive.com/wp-content/uploads/2018/05/shop-11-gallery-3.jpg",
+        "https://cocco.qodeinteractive.com/wp-content/uploads/2018/05/shop-2-gallery-2.jpg",
+        "https://cocco.qodeinteractive.com/wp-content/uploads/2018/05/shop-2-gallery-1.jpg"
+      ]
+    },
+    {
+      "id": 11,
+      "title": "Flamingo Charm",
+      "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit nean commodo ligula eget dolor. Aenean massa. Cum sociis Theme natoque penatibus et magnis dis. Etiam ultricies nisi vel augue.",
+      "price": 120,
+      "discountPercentage": 12.96,
+      "rating": 3.69,
+      "stock": 12,
+      "brand": "",
+      "category": "Footwear",
+      "thumbnail": "https://cocco.qodeinteractive.com/wp-content/uploads/2018/05/shop-29-img.jpg",
+      "images": [
+        "https://cocco.qodeinteractive.com/wp-content/uploads/2018/05/shop-29-img.jpg",
+        "https://cocco.qodeinteractive.com/wp-content/uploads/2018/05/shop-29-gallery-4.jpg",
+        "https://cocco.qodeinteractive.com/wp-content/uploads/2018/05/shop-29-gallery-3.jpg",
+        "https://cocco.qodeinteractive.com/wp-content/uploads/2018/05/shop-29-gallery-2.jpg",
+        "https://cocco.qodeinteractive.com/wp-content/uploads/2018/05/shop-29-gallery-1.jpg"
+      ]
+    },
+    {
+      "id": 12,
+      "title": "Pink Bag",
+      "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit nean commodo ligula eget dolor. Aenean massa. Cum sociis Theme natoque penatibus et magnis dis. Etiam ultricies nisi vel augue.",
+      "price": 120,
+      "discountPercentage": 12.96,
+      "rating": 3.69,
+      "stock": 12,
+      "brand": "",
+      "category": "Accessories",
+      "thumbnail": "https://cocco.qodeinteractive.com/wp-content/uploads/2018/05/shop-3-img-800x889.jpg",
+      "images": [
+        "https://cocco.qodeinteractive.com/wp-content/uploads/2018/05/shop-3-img-800x889.jpg",
+        "https://cocco.qodeinteractive.com/wp-content/uploads/2018/05/shop-29-gallery-4.jpg",
+        "https://cocco.qodeinteractive.com/wp-content/uploads/2018/05/shop-29-gallery-3.jpg",
+        "https://cocco.qodeinteractive.com/wp-content/uploads/2018/05/shop-29-gallery-2.jpg",
+        "https://cocco.qodeinteractive.com/wp-content/uploads/2018/05/shop-29-gallery-1.jpg"
+      ]
+    },
+    {
+      "id": 13,
+      "title": "Pink Ponny 03",
+      "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit nean commodo ligula eget dolor. Aenean massa. Cum sociis Theme natoque penatibus et magnis dis. Etiam ultricies nisi vel augue.",
+      "price": 542,
+      "discountPercentage": 12.96,
+      "rating": 4.69,
+      "stock": 54,
+      "brand": "",
+      "category": "Babies",
+      "thumbnail": "https://cocco.qodeinteractive.com/wp-content/uploads/2018/05/shop-10-img.jpg",
+      "images": [
+        "https://cocco.qodeinteractive.com/wp-content/uploads/2018/05/shop-10-img.jpg",
+        "https://cocco.qodeinteractive.com/wp-content/uploads/2018/05/shop-10-gallery-4.jpg",
+        "https://cocco.qodeinteractive.com/wp-content/uploads/2018/05/shop-10-gallery-3.jpg",
+        "https://cocco.qodeinteractive.com/wp-content/uploads/2018/05/shop-10-gallery-2.jpg",
+        "https://cocco.qodeinteractive.com/wp-content/uploads/2018/05/shop-10-gallery-1.jpg"
+      ]
+    },
+    {
+      "id": 14,
+      "title": "Suspender Shorts 03",
+      "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit nean commodo ligula eget dolor. Aenean massa. Cum sociis Theme natoque penatibus et magnis dis. Etiam ultricies nisi vel augue.",
+      "price": 58,
+      "discountPercentage": 12.96,
+      "rating": 4.69,
+      "stock": 54,
+      "brand": "",
+      "category": "Girls",
+      "thumbnail": "https://cocco.qodeinteractive.com/wp-content/uploads/2018/05/shop-1-img.jpg",
+      "images": [
+        "https://cocco.qodeinteractive.com/wp-content/uploads/2018/05/shop-1-img.jpg",
+        "https://cocco.qodeinteractive.com/wp-content/uploads/2018/05/shop-1-gallery-4.jpg",
+        "https://cocco.qodeinteractive.com/wp-content/uploads/2018/05/shop-1-gallery-3.jpg",
+        "https://cocco.qodeinteractive.com/wp-content/uploads/2018/05/shop-1-gallery-2.jpg",
+        "https://cocco.qodeinteractive.com/wp-content/uploads/2018/05/shop-1-gallery-1.jpg"
+      ]
+    },
+    {
+      "id": 15,
+      "title": "Striped T-shirt",
+      "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit nean commodo ligula eget dolor. Aenean massa. Cum sociis Theme natoque penatibus et magnis dis. Etiam ultricies nisi vel augue.",
+      "price": 120,
+      "discountPercentage": 12.96,
+      "rating": 3.69,
+      "stock": 5104,
+      "brand": "",
+      "category": "Toys",
+      "thumbnail": "https://cocco.qodeinteractive.com/wp-content/uploads/2018/05/shop-11-img.jpg",
+      "images": [
+        "https://cocco.qodeinteractive.com/wp-content/uploads/2018/05/shop-11-img.jpg",
+        "https://cocco.qodeinteractive.com/wp-content/uploads/2018/05/shop-11-gallery-4.jpg",
+        "https://cocco.qodeinteractive.com/wp-content/uploads/2018/05/shop-11-gallery-3.jpg",
+        "https://cocco.qodeinteractive.com/wp-content/uploads/2018/05/shop-11-gallery-2.jpg",
+        "https://cocco.qodeinteractive.com/wp-content/uploads/2018/05/shop-11-gallery-1.jpg"
+      ]
+    },
+    {
+      "id": 4,
+      "title": "Teddy Bear 03",
+      "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit nean commodo ligula eget dolor. Aenean massa. Cum sociis Theme natoque penatibus et magnis dis. Etiam ultricies nisi vel augue.",
+      "price": 120,
+      "discountPercentage": 12.96,
+      "rating": 3.69,
+      "stock": 12,
+      "brand": "",
+      "category": "Toys",
+      "thumbnail": "https://cocco.qodeinteractive.com/wp-content/uploads/2018/05/shop-2-img.jpg",
+      "images": [
+        "https://cocco.qodeinteractive.com/wp-content/uploads/2018/05/shop-2-img.jpg",
+        "https://cocco.qodeinteractive.com/wp-content/uploads/2018/05/shop-2-gallery-4.jpg",
+        "https://cocco.qodeinteractive.com/wp-content/uploads/2018/05/shop-11-gallery-3.jpg",
+        "https://cocco.qodeinteractive.com/wp-content/uploads/2018/05/shop-2-gallery-2.jpg",
+        "https://cocco.qodeinteractive.com/wp-content/uploads/2018/05/shop-2-gallery-1.jpg"
+      ]
+    }
+  ],
+  "categories": [
+    {
+      "id": 1,
+      "title": "Babies",
+      "image": "https://images.unsplash.com/photo-1566004100631-35d015d6a491?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
+    },
+    {
+      "id": 2,
+      "title": "Boys",
+      "image": "https://images.unsplash.com/photo-1525967939060-5078085a2475?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
+    },
+    {
+      "id": 3,
+      "title": "Girls",
+      "image": "https://images.unsplash.com/photo-1516627145497-ae6968895b74?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=840&q=80"
+    },
+    {
+      "id": 4,
+      "title": "Accessories",
+      "image": "https://images.unsplash.com/photo-1552788960-65fcafe071a5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=385&q=80"
+    },
+    {
+      "id": 5,
+      "title": "Toys",
+      "image": "https://images.unsplash.com/photo-1501686637-b7aa9c48a882?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
+    },
+    {
+      "id": 6,
+      "title": "Footwear",
+      "image": "https://images.unsplash.com/photo-1501686637-b7aa9c48a882?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
+    }
+  ]
+}
