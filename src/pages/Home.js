@@ -16,7 +16,7 @@ const Home = () => {
   document.title = "Baby Shop";
 
   useEffect(() => {
-    dispatch(fetchProducts());
+    dispatch(fetchProducts({ categories: [], search: "" }));
   }, [dispatch]);
 
   let content = null;
@@ -39,7 +39,7 @@ const Home = () => {
               New Product
             </div>
             <Link
-              to="/"
+              to="/shop"
               className="bg-pink-800 hover:bg-pink-900 text-white text-base py-2 px-4 rounded-full"
             >
               All Product

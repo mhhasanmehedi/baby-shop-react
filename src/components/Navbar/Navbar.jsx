@@ -8,8 +8,16 @@ import {
 } from "react-icons/ai";
 import { BiUser, BiChevronDown } from "react-icons/bi";
 import { MdCall, MdEmail } from "react-icons/md";
+import { useSelector } from "react-redux";
+import Search from "./Search";
 
 const Navbar = () => {
+  const { cartItems } = useSelector((state) => state.carts);
+
+  const totalPrice = cartItems.reduce(
+    (acc, product) => acc + product.price * product.quantity,
+    0
+  );
   return (
     <>
       {/* Header Top Start */}
@@ -19,17 +27,7 @@ const Navbar = () => {
             <Link to="/" className="logo">
               <img src={Logo} alt="Logo Missing" />
             </Link>
-            <form className="bg-gray-300">
-              <input
-                type="text"
-                name="search"
-                placeholder="Search product"
-                className="border"
-              />
-              <button type="submit">
-                <AiOutlineSearch />
-              </button>
-            </form>
+            <Search />
             <div className="flex gap-5">
               <div className="flex items-center">
                 <Link to="/" className="text-5xl">
@@ -51,13 +49,16 @@ const Navbar = () => {
               >
                 <AiOutlineHeart className="text-pink-600te xt-xl" />
               </Link>
-              <Link to="/cart" className="flex">
-                <div className="bg-pink-600 flex items-center justify-center h-11 w-11 rounded-full">
+              <Link to="/cart" className="flex gap-3">
+                <div className="relative bg-pink-600 flex items-center justify-center h-11 w-11 rounded-full">
                   <AiOutlineShoppingCart className="text-white text-xl" />
+                  <div className="absolute top-0 right-0 h-5 w-5 text-sm flex items-center justify-center rounded-full bg-gray-600 text-white">
+                    {cartItems.length}
+                  </div>
                 </div>
 
                 <div className="">
-                  Total Price <span className="block">৳264</span>
+                  Total Price <span className="block">৳ {totalPrice}</span>
                 </div>
               </Link>
             </div>
@@ -73,11 +74,11 @@ const Navbar = () => {
             <div className="flex items-center gap-3">
               <Link
                 to="/"
-                className="p-4 uppercase font-semibold text-gray-800"
+                className="py-4 pr-5 uppercase font-semibold text-gray-800"
               >
                 Home
               </Link>
-              <div className="group relative p-4">
+              <div className="group relative py-4 pr-5">
                 <div className="flex items-center uppercase font-semibold text-gray-800">
                   Category
                   <BiChevronDown className="transition group-hover:rotate-180" />
@@ -105,13 +106,13 @@ const Navbar = () => {
               </div>
               <Link
                 to="/about"
-                className="p-4 uppercase font-semibold text-gray-800"
+                className="py-4 pr-5 uppercase font-semibold text-gray-800"
               >
                 About Us
               </Link>
               <Link
                 to="/contact"
-                className="p-4 uppercase font-semibold text-gray-800"
+                className="py-4 pr-5 uppercase font-semibold text-gray-800"
               >
                 Contact
               </Link>

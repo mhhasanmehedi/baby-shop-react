@@ -286,7 +286,7 @@
       ]
     },
     {
-      "id": 4,
+      "id": 16,
       "title": "Teddy Bear 03",
       "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit nean commodo ligula eget dolor. Aenean massa. Cum sociis Theme natoque penatibus et magnis dis. Etiam ultricies nisi vel augue.",
       "price": 120,
@@ -336,6 +336,5 @@
       "title": "Footwear",
       "image": "https://images.unsplash.com/photo-1501686637-b7aa9c48a882?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
     }
-  ],
-  "carts": []
+  ]
 }

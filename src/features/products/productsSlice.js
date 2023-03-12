@@ -12,8 +12,8 @@ const initialState = {
 // async thunk
 export const fetchProducts = createAsyncThunk(
   "products/fetchProducts",
-  async () => {
-    const products = await getProducts();
+  async ({ categories, search }) => {
+    const products = await getProducts(categories, search);
     return products;
   }
 );

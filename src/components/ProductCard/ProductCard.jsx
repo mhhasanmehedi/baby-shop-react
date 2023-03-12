@@ -7,7 +7,7 @@ import {
 } from "react-icons/ai";
 import { BsThreeDotsVertical } from "react-icons/bs";
 import { useDispatch } from "react-redux";
-import { createCarts } from "../../features/carts/cartsSlice";
+import { addToCart } from "../../features/cart/cartSlice";
 
 const ProductCard = ({ product }) => {
   const dispatch = useDispatch();
@@ -26,7 +26,7 @@ const ProductCard = ({ product }) => {
 
       <div className="absolute  top-3 -right-8 invisible transition duration-700 opacity-0 group-hover:visible group-hover:right-3 group-hover:opacity-100 flex flex-col gap-1">
         <div
-          onClick={() => dispatch(createCarts(product))}
+          onClick={() => dispatch(addToCart(product))}
           className="h-8 w-8 flex items-center justify-center transition cursor-pointer text-pink-700 hover:after:bg-pink-700 hover:text-white relative z-[1] after:absolute after:bg-gray-200  after:content: '' after:h-full after:w-full after:left-1/2 after:top-1/2 after:transform after:-translate-x-1/2 after:-translate-y-1/2 after:-z-[1]"
         >
           <AiOutlineShoppingCart />
