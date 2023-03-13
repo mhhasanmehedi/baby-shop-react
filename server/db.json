@@ -1,4 +1,14 @@
 {
+  "users": [
+    {
+      "id": 1,
+      "first_name": "Mehedi",
+      "last_name": "Hasan",
+      "email": "mehedihasan@gmail.com",
+      "mobile": "01726476303",
+      "password": "mehedihasanrahat"
+    }
+  ],
   "products": [
     {
       "id": 1,

@@ -1,28 +1,51 @@
 import React, { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Footer from "./components/Footer/Footer";
 import Navbar from "./components/Navbar/Navbar";
+import PrivateRoute from "./components/PrivateRoute";
+import { fetchUsers } from "./features/auth/authSlice";
 import About from "./pages/About";
 import Cart from "./pages/Cart";
-import CategoryProducts from "./pages/CategoryProducts";
 import Contact from "./pages/Contact";
+import Dashboard from "./pages/Dashboard";
 import Home from "./pages/Home";
+import Orders from "./pages/Orders";
 import PageNotFound from "./pages/PageNotFound";
 import Product from "./pages/Product";
+import Profile from "./pages/Profile";
+import Settings from "./pages/Settings";
 import Shop from "./pages/Shop";
+import SignIn from "./pages/SignIn";
+import SignUp from "./pages/SignUp";
 
 function App() {
+  const { currentUser, users } = useSelector((state) => state.users);
+
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(fetchUsers());
+  }, []);
+
   return (
     <BrowserRouter>
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
+        <Route path="/sign_in" element={<SignIn />} />
+        <Route path="/sign_up" element={<SignUp />} />
+        <Route element={<PrivateRoute />}>
+          <Route element={<Dashboard />} path="/dashboard" />
+          <Route path="/dashboard/profile" element={<Profile />} />
+          <Route path="/dashboard/orders" element={<Orders />} />
+          <Route path="/dashboard/settings" element={<Settings />} />
+        </Route>
         <Route path="/cart" element={<Cart />} />
         <Route path="/shop" element={<Shop />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/products/:productId" element={<Product />} />
-        <Route path="/categories/:category" element={<CategoryProducts />} />
         <Route path="*" element={<PageNotFound />} />
       </Routes>
       <Footer />

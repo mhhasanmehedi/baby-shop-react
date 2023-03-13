@@ -20,8 +20,14 @@ const Footer = () => {
           <div className="flex">
             <div className="flex-[5]">
               <div className="mb-4 text-xl">Get In Touch</div>
-              <Link to="/" className="bg-white inline-block">
-                <img src={Logo} alt="Logo" className="h-10 w-10" />
+              <Link to="/" className="logo flex items-center">
+                <img src={Logo} className="h-16 bg-white" alt="Logo Missing" />
+                <div className="font-mono font-bold ml-3 uppercase tracking-[1px]">
+                  Baby Shop
+                  <span className="block tracting-0 lowercase text-pink-400">
+                    Happy Shopping
+                  </span>
+                </div>
               </Link>
               <div className="flex flex-col">
                 <p>

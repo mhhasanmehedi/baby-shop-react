@@ -4,8 +4,8 @@ import { createSlice } from "@reduxjs/toolkit";
 const initialState = {
   categories: [],
   search: "",
-  sortStatus: "low_to_high",
-  view: "list",
+  sortStatus: "default",
+  view: "grid",
 };
 
 // create slice

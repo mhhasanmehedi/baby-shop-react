@@ -22,19 +22,25 @@ const Navbar = () => {
     <>
       {/* Header Top Start */}
       <div className="border-b py-3">
-        <div className="container mx-auto">
+        <div className="container mx-auto px-4">
           <div className="flex justify-between items-center">
-            <Link to="/" className="logo">
-              <img src={Logo} alt="Logo Missing" />
+            <Link to="/" className="logo flex items-center">
+              <img src={Logo} className="h-16" alt="Logo Missing" />
+              <div className="font-mono font-bold ml-3 uppercase tracking-[1px]">
+                Baby Shop
+                <span className="block tracting-0 lowercase text-pink-400">
+                  Happy Shopping
+                </span>
+              </div>
             </Link>
             <Search />
             <div className="flex gap-5">
               <div className="flex items-center">
-                <Link to="/" className="text-5xl">
+                <Link to="/dashboard" className="text-5xl">
                   <BiUser />
                 </Link>
                 <div className="accountInfo">
-                  <Link to="/" className="hover:text-pink-600">
+                  <Link to="/dashboard" className="hover:text-pink-600">
                     Account
                   </Link>
                   <div className="">
@@ -69,7 +75,7 @@ const Navbar = () => {
 
       {/* Header Bottom Start */}
       <div className="border-b">
-        <div className="container mx-auto">
+        <div className="container mx-auto px-4">
           <div className="flex justify-between items-center">
             <div className="flex items-center gap-3">
               <Link

@@ -19,19 +19,21 @@ const Shop = () => {
   // set Title
   document.title = "Shop - Baby Shop";
 
+  useEffect(() => {
+    dispatch(fetchProducts({ categories, search }));
+  }, [dispatch, categories, search]);
+
   let sortProducts = (a, b) => {
     if (sortStatus === "low_to_high") {
-      return b.price - a.price;
-    } else if (sortStatus === "high_to_low") {
       return a.price - b.price;
+    } else if (sortStatus === "high_to_low") {
+      return b.price - a.price;
     } else {
       return 0;
     }
   };
 
-  useEffect(() => {
-    dispatch(fetchProducts({ categories, search }));
-  }, [dispatch, categories, search]);
+  // console.log(products.sort((a, b) => a.price - b.price));
 
   let content = null;
 
@@ -43,8 +45,9 @@ const Shop = () => {
   if (!isLoading && !isError && products?.length === 0)
     content = <div className="col-span-12">Products Not Found!</div>;
 
-  if (!isError && !isLoading && products?.length > 0)
+  if (!isError && !isLoading && products.length > 0) {
     content = products
+      .slice()
       .sort(sortProducts)
       .map((product) =>
         view === "grid" ? (
@@ -53,6 +56,9 @@ const Shop = () => {
           <ProductCardListView product={product} key={product.id} />
         )
       );
+  }
+  // console.log(products.sort((a, b) => a.price - b.price));
+  // console.log(products[0].price);
 
   return (
     <div className="my-10">
