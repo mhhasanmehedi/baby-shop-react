@@ -1,12 +1,24 @@
 {
   "users": [
     {
-      "id": 1,
-      "first_name": "Mehedi",
-      "last_name": "Hasan",
+      "name": "Mehedi Hasan",
       "email": "mehedihasan@gmail.com",
-      "mobile": "01726476303",
-      "password": "mehedihasanrahat"
+      "mobile": "01743068304",
+      "address": "Dhanikhola, Trishal, Mymensingh",
+      "password": "mehedihasan",
+      "id": 1
+    },
+    {
+      "name": "Mehedi Hasan Rahat",
+      "email": "mmmehedi53@gmail.com",
+      "password": "imammehedi",
+      "id": 2
+    },
+    {
+      "name": "Mehedi Hasan Rahat",
+      "email": "mehedihasan@gmail.com",
+      "password": "mehedihasan",
+      "id": 3
     }
   ],
   "products": [
