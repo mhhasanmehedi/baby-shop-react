@@ -2,6 +2,7 @@ import React from "react";
 
 const About = () => {
   document.title = "About - Baby Shop";
+  
   return (
     <div className="py-10">
       <div className="container mx-auto">

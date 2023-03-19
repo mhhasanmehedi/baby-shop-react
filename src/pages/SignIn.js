@@ -19,12 +19,9 @@ const SignIn = () => {
         return user;
       }
     });
-
     matchUser ? dispatch(signIn(matchUser)) : alert("User Not Found");
-
     setEmail("");
     setPassword("");
-
     swal("Good job!", "You Logged In successfully!", "success");
   };
 
