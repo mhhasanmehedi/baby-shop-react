@@ -6,6 +6,7 @@ import Loading from "../components/Ui/Loading";
 import { fetchProducts } from "../features/products/productsSlice";
 import ProductCard from "../components/ProductCard/ProductCard";
 import ProductCardListView from "../components/shop/ProductCardListView";
+import LoadingProductCard from "../components/ProductCard/LoadingProductCard";
 
 const Shop = () => {
   const { products, isLoading, isError, error } = useSelector(
@@ -20,8 +21,19 @@ const Shop = () => {
   document.title = "Shop - Baby Shop";
 
   useEffect(() => {
-    dispatch(fetchProducts({ categories, search }));
-  }, [dispatch, categories, search]);
+    dispatch(fetchProducts());
+  }, [dispatch]);
+
+  const filterCategory = (product) => {
+    if (categories.length > 0) {
+      return categories.includes(product.category);
+    }
+    return product;
+  };
+
+  const filterSearch = (product) => {
+    return product.title.toLowerCase().includes(search.toLowerCase());
+  };
 
   let sortProducts = (a, b) => {
     if (sortStatus === "low_to_high") {
@@ -33,11 +45,23 @@ const Shop = () => {
     }
   };
 
-  // console.log(products.sort((a, b) => a.price - b.price));
-
   let content = null;
 
-  if (isLoading) content = <Loading />;
+  if (isLoading)
+    content = (
+      <>
+        <LoadingProductCard />
+        <LoadingProductCard />
+        <LoadingProductCard />
+        <LoadingProductCard />
+        <LoadingProductCard />
+        <LoadingProductCard />
+        <LoadingProductCard />
+        <LoadingProductCard />
+        <LoadingProductCard />
+        <LoadingProductCard />
+      </>
+    );
 
   if (!isLoading && isError)
     content = <div className="col-span-12">{error}</div>;
@@ -49,6 +73,8 @@ const Shop = () => {
     content = products
       .slice()
       .sort(sortProducts)
+      .filter(filterCategory)
+      .filter(filterSearch)
       .map((product) =>
         view === "grid" ? (
           <ProductCard product={product} key={product.id} />
@@ -57,8 +83,6 @@ const Shop = () => {
         )
       );
   }
-  // console.log(products.sort((a, b) => a.price - b.price));
-  // console.log(products[0].price);
 
   return (
     <div className="my-10">

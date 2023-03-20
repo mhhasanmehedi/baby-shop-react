@@ -6,6 +6,8 @@ import Navbar from "./components/Navbar/Navbar";
 import PrivateRoute from "./components/PrivateRoute";
 import { fetchUsers } from "./features/auth/authSlice";
 import About from "./pages/About";
+import AddProduct from "./pages/AddProduct";
+import AllProduct from "./pages/AllProduct";
 import Cart from "./pages/Cart";
 import Contact from "./pages/Contact";
 import Dashboard from "./pages/Dashboard";
@@ -42,6 +44,8 @@ function App() {
           <Route path="/dashboard/orders" element={<Orders />} />
           <Route path="/dashboard/settings" element={<Settings />} />
         </Route>
+        <Route path="/admin/add_product" element={<AddProduct />} />
+        <Route path="/admin/all_product" element={<AllProduct />} />
         <Route path="/cart" element={<Cart />} />
         <Route path="/shop" element={<Shop />} />
         <Route path="/contact" element={<Contact />} />

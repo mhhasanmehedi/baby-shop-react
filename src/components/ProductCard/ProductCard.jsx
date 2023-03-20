@@ -20,7 +20,11 @@ const ProductCard = ({ product }) => {
           to={`/products/${id}`}
           className="block w-full h-full transition  group-hover:scale-110"
         >
-          <img src={thumbnail} className="h-full w-full" alt={title} />
+          <img
+            src={thumbnail}
+            className="h-[202px] w-full object-cover"
+            alt={title}
+          />
         </Link>
       </div>
 

@@ -40,8 +40,8 @@ const Navbar = () => {
                   <BiUser />
                 </Link>
                 <div className="accountInfo">
-                  <Link to="/dashboard" className="hover:text-pink-600">
-                    Account
+                  <Link to="/admin/add_product" className="hover:text-pink-600">
+                    Admin
                   </Link>
                   <div className="">
                     <Link to="/sign_in">SignIn</Link>|

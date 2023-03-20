@@ -1,5 +1,5 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
-import { getProducts } from "./productsAPI";
+import { addProduct, getProducts, deleteProduct } from "./productsAPI";
 
 // initial state
 const initialState = {
@@ -9,12 +9,30 @@ const initialState = {
   error: "",
 };
 
-// async thunk
+// get all products async thunk
 export const fetchProducts = createAsyncThunk(
   "products/fetchProducts",
-  async ({ categories, search }) => {
-    const products = await getProducts(categories, search);
+  async () => {
+    const products = await getProducts();
     return products;
+  }
+);
+
+// Create product async thunk
+export const createProduct = createAsyncThunk(
+  "products/createProduct",
+  async (data) => {
+    const product = await addProduct(data);
+    return product;
+  }
+);
+
+// Delete Product async thunk
+export const removeProduct = createAsyncThunk(
+  "products/removeProduct",
+  async (id) => {
+    const product = await deleteProduct(id);
+    return product;
   }
 );
 
@@ -35,6 +53,35 @@ const productsSlice = createSlice({
       .addCase(fetchProducts.rejected, (state, action) => {
         state.isLoading = false;
         state.products = [];
+        state.isError = true;
+        state.error = action.error?.message;
+      })
+      .addCase(createProduct.pending, (state) => {
+        state.isError = false;
+        state.isLoading = true;
+      })
+      .addCase(createProduct.fulfilled, (state, action) => {
+        state.isError = false;
+        state.isLoading = false;
+        state.products.push(action.payload);
+      })
+      .addCase(createProduct.rejected, (state, action) => {
+        state.isLoading = false;
+        state.isError = true;
+        state.error = action.error?.message;
+      })
+      .addCase(removeProduct.pending, (state) => {
+        state.isError = false;
+        state.isLoading = true;
+      })
+      .addCase(removeProduct.fulfilled, (state, action) => {
+        state.isError = false;
+        state.isLoading = false;
+
+        state.products = state.products.filter((t) => t.id !== action.meta.arg);
+      })
+      .addCase(removeProduct.rejected, (state, action) => {
+        state.isLoading = false;
         state.isError = true;
         state.error = action.error?.message;
       });

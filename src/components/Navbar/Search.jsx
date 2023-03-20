@@ -7,17 +7,11 @@ import { useMatch, useNavigate } from "react-router-dom";
 const Search = () => {
   const { search } = useSelector((state) => state.filter);
   const dispatch = useDispatch();
-  const [input, setInput] = useState(search);
   const match = useMatch("/shop");
   const navigate = useNavigate();
 
   const handleSubmit = (e) => {
     e.preventDefault();
-
-    dispatch(searched(input));
-    if (!match) {
-      navigate("/shop");
-    }
   };
   return (
     <form className="bg-gray-300" onSubmit={handleSubmit}>
@@ -26,8 +20,14 @@ const Search = () => {
         name="search"
         placeholder="Search product"
         className="border"
-        value={input}
-        onChange={(e) => setInput(e.target.value)}
+        value={search}
+        onChange={(e) => {
+          dispatch(searched(e.target.value));
+
+          if (!match) {
+            navigate("/shop");
+          }
+        }}
       />
       <button type="submit">
         <AiOutlineSearch />

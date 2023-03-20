@@ -2,8 +2,8 @@ import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import CategoryList from "../components/Categories/CategoryList";
+import LoadingProductCard from "../components/ProductCard/LoadingProductCard";
 import ProductCard from "../components/ProductCard/ProductCard";
-import Loading from "../components/Ui/Loading";
 import { fetchProducts } from "../features/products/productsSlice";
 
 const Home = () => {
@@ -16,11 +16,29 @@ const Home = () => {
   document.title = "Baby Shop";
 
   useEffect(() => {
-    dispatch(fetchProducts({ categories: [], search: "" }));
+    dispatch(fetchProducts());
   }, [dispatch]);
 
   let content = null;
-  if (isLoading) content = <Loading />;
+  if (isLoading)
+    content = (
+      <>
+        <LoadingProductCard />
+        <LoadingProductCard />
+        <LoadingProductCard />
+        <LoadingProductCard />
+        <LoadingProductCard />
+        <LoadingProductCard />
+        <LoadingProductCard />
+        <LoadingProductCard />
+        <LoadingProductCard />
+        <LoadingProductCard />
+        <LoadingProductCard />
+        <LoadingProductCard />
+        <LoadingProductCard />
+        <LoadingProductCard />
+      </>
+    );
   if (!isLoading && isError)
     content = <div className="col-span-12">{error}</div>;
   if (!isLoading && !isError && products?.length === 0)

@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { fetchCategories } from "../../features/categories/categoriesSlice";
 import Loading from "../Ui/Loading";
 import CategoryItem from "./CategoryItem";
+import LoadingCategoryItem from "./LoadingCategoryItem";
 
 const CategoryList = () => {
   const { categories, isLoading, isError, error } = useSelector(
@@ -15,7 +16,18 @@ const CategoryList = () => {
   }, [dispatch]);
 
   let content = null;
-  if (isLoading) content = <Loading />;
+  if (isLoading)
+    content = (
+      <>
+        <LoadingCategoryItem />
+        <LoadingCategoryItem />
+        <LoadingCategoryItem />
+        <LoadingCategoryItem />
+        <LoadingCategoryItem />
+        <LoadingCategoryItem />
+        <LoadingCategoryItem />
+      </>
+    );
   if (!isLoading && isError)
     content = <div className="col-span-12">{error}</div>;
   if (!isLoading && !isError && categories?.length === 0)
@@ -26,7 +38,7 @@ const CategoryList = () => {
     ));
 
   return (
-    <div className="container mx-auto my-10">
+    <div className="container mx-auto my-10 px-4">
       <div className="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-7 gap-4">
         {content}
       </div>
