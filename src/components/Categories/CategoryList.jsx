@@ -1,7 +1,6 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchCategories } from "../../features/categories/categoriesSlice";
-import Loading from "../Ui/Loading";
 import CategoryItem from "./CategoryItem";
 import LoadingCategoryItem from "./LoadingCategoryItem";
 

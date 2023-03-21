@@ -11,7 +11,7 @@ const ProductImgBox = ({ product }) => {
   return (
     <div className=" bg-gray-200">
       <div>
-        <img src={image} alt={product.title} className="w-full" />
+        <img src={image} alt={product.title} className="w-full h-[508px]" />
       </div>
 
       <Swiper
@@ -28,7 +28,7 @@ const ProductImgBox = ({ product }) => {
             <img
               src={img}
               alt="Product Img"
-              className="h-auto border border-gray-300 cursor-pointer"
+              className="h-[122px] w-full border border-red-300 cursor-pointer object-cover"
               onClick={() => setImage(img)}
             />
           </SwiperSlide>

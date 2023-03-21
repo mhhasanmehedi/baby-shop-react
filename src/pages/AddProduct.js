@@ -1,7 +1,8 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import AdminDashboardLayout from "../components/Layout/AdminDashboardLayout";
+import { fetchCategories } from "../features/categories/categoriesSlice";
 import { createProduct } from "../features/products/productsSlice";
 
 const initialState = {
@@ -20,8 +21,14 @@ const initialState = {
 const AddProduct = () => {
   const [productData, setProductData] = useState(initialState);
   const { isLoading, isError, error } = useSelector((state) => state.products);
+  const { categories } = useSelector((state) => state.categories);
+
   const dispatch = useDispatch();
   const navigate = useNavigate();
+
+  useEffect(() => {
+    dispatch(fetchCategories());
+  }, [dispatch]);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -147,11 +154,10 @@ const AddProduct = () => {
             </div>
             <div>
               <label htmlFor="category">Category</label>
-              <input
-                type="text"
-                className="block p-3  border outline-none w-full"
-                id="category"
+              <select
                 name="category"
+                id="category"
+                className="block p-3  border outline-none w-full"
                 required
                 value={productData.category}
                 onChange={(e) =>
@@ -160,7 +166,15 @@ const AddProduct = () => {
                     category: e.target.value,
                   })
                 }
-              />
+              >
+                <option value="">Category Select..</option>
+                {categories.length > 0 &&
+                  categories.map((cat) => (
+                    <option key={cat.id} value={cat.title}>
+                      {cat.title}
+                    </option>
+                  ))}
+              </select>
             </div>
             <div>
               <label htmlFor="thumbnail">Thumbnail</label>
@@ -188,6 +202,74 @@ const AddProduct = () => {
                 name="image1"
                 required
                 value={productData.images[1]}
+                onChange={(e) =>
+                  setProductData({
+                    ...productData,
+                    images: [...productData.images, e.target.value],
+                  })
+                }
+              />
+            </div>
+            <div>
+              <label htmlFor="image1">Image 02</label>
+              <input
+                type="text"
+                className="block p-3  border outline-none w-full"
+                id="image1"
+                name="image1"
+                required
+                value={productData.images[2]}
+                onChange={(e) =>
+                  setProductData({
+                    ...productData,
+                    images: [...productData.images, e.target.value],
+                  })
+                }
+              />
+            </div>
+            <div>
+              <label htmlFor="image1">Image 03</label>
+              <input
+                type="text"
+                className="block p-3  border outline-none w-full"
+                id="image1"
+                name="image1"
+                required
+                value={productData.images[3]}
+                onChange={(e) =>
+                  setProductData({
+                    ...productData,
+                    images: [...productData.images, e.target.value],
+                  })
+                }
+              />
+            </div>
+            <div>
+              <label htmlFor="image1">Image 04</label>
+              <input
+                type="text"
+                className="block p-3  border outline-none w-full"
+                id="image1"
+                name="image1"
+                required
+                value={productData.images[4]}
+                onChange={(e) =>
+                  setProductData({
+                    ...productData,
+                    images: [...productData.images, e.target.value],
+                  })
+                }
+              />
+            </div>
+            <div>
+              <label htmlFor="image1">Image 05</label>
+              <input
+                type="text"
+                className="block p-3  border outline-none w-full"
+                id="image1"
+                name="image1"
+                required
+                value={productData.images[5]}
                 onChange={(e) =>
                   setProductData({
                     ...productData,
