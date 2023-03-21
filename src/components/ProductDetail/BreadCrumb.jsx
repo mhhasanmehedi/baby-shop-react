@@ -11,7 +11,7 @@ const BreadCrumb = ({ title, category, id }) => {
     <div className="flex items-center">
       <Link
         to="/"
-        className="flex items-center text-gray-700 hover:text-gray-800 my-3"
+        className="flex items-center gap-1 text-gray-700 hover:text-gray-800 my-3"
       >
         <AiOutlineHome />
         Go Home

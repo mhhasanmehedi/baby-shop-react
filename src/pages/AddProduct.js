@@ -4,8 +4,10 @@ import { useNavigate } from "react-router-dom";
 import AdminDashboardLayout from "../components/Layout/AdminDashboardLayout";
 import { fetchCategories } from "../features/categories/categoriesSlice";
 import { createProduct } from "../features/products/productsSlice";
+import uniqid from "uniqid";
 
 const initialState = {
+  sku: "",
   title: "",
   description: "",
   price: "",
@@ -27,8 +29,11 @@ const AddProduct = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
+    setProductData({ ...productData, sku: uniqid() });
     dispatch(fetchCategories());
   }, [dispatch]);
+
+  console.log(productData.sku);
 
   const handleSubmit = (e) => {
     e.preventDefault();

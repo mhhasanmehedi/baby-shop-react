@@ -9,8 +9,8 @@ import { Navigation } from "swiper";
 const ProductImgBox = ({ product }) => {
   const [image, setImage] = useState(product.thumbnail);
   return (
-    <div className=" bg-gray-200">
-      <div>
+    <div>
+      <div className="border mb-3">
         <img src={image} alt={product.title} className="w-full h-[508px]" />
       </div>
 

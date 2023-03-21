@@ -7,6 +7,7 @@ import { fetchProduct } from "../features/product/productSlice";
 import BreadCrumb from "../components/ProductDetail/BreadCrumb";
 import ProductImgBox from "../components/ProductDetail/ProductImgBox";
 import ProductContentBox from "../components/ProductDetail/ProductContentBox";
+import RelatedProductList from "../components/RelatedProducts/RelatedProductList";
 
 const Product = () => {
   const { isLoading, isError, error, product } = useSelector(
@@ -38,12 +39,17 @@ const Product = () => {
           category={product.category}
           id={product.id}
         />
-        <div className="flex my-4">
-          <div className="flex-[9] grid grid-cols-2 gap-5">
+        <div className="flex flex-col lg:flex-row my-4">
+          <div className="lg:flex-[9] grid grid-cols-1 lg:grid-cols-2 gap-5 ">
             <ProductImgBox product={product} />
             <ProductContentBox product={product} />
           </div>
-          <div className="flex-[3] bg-gray-300">Right Bar</div>
+          <div className="lg:flex-[3] ">
+            <RelatedProductList
+              currentProductId={product.id}
+              category={product.category}
+            />
+          </div>
         </div>
       </div>
     );
