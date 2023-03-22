@@ -1,5 +1,10 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
-import { addProduct, getProducts, deleteProduct } from "./productsAPI";
+import {
+  addProduct,
+  getProducts,
+  deleteProduct,
+  editProduct,
+} from "./productsAPI";
 
 // initial state
 const initialState = {
@@ -23,6 +28,15 @@ export const createProduct = createAsyncThunk(
   "products/createProduct",
   async (data) => {
     const product = await addProduct(data);
+    return product;
+  }
+);
+
+// Update product async thunk
+export const updateProduct = createAsyncThunk(
+  "products/updateProduct",
+  async ({ id, data }) => {
+    const product = await editProduct(id, data);
     return product;
   }
 );
@@ -66,6 +80,25 @@ const productsSlice = createSlice({
         state.products.push(action.payload);
       })
       .addCase(createProduct.rejected, (state, action) => {
+        state.isLoading = false;
+        state.isError = true;
+        state.error = action.error?.message;
+      })
+      .addCase(updateProduct.pending, (state) => {
+        state.isError = false;
+        state.isLoading = true;
+      })
+      .addCase(updateProduct.fulfilled, (state, action) => {
+        state.isLoading = false;
+        state.isError = false;
+
+        const indexToUpdate = state.products.findIndex(
+          (product) => product.id === action.payload.id
+        );
+
+        state.products[indexToUpdate] = action.payload;
+      })
+      .addCase(updateProduct.rejected, (state, action) => {
         state.isLoading = false;
         state.isError = true;
         state.error = action.error?.message;

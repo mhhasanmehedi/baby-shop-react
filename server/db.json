@@ -23,26 +23,6 @@
   ],
   "products": [
     {
-      "id": 1,
-      "sku": "lfi3equ6",
-      "title": "Pink Ponny ",
-      "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit nean commodo ligula eget dolor. Aenean massa. Cum sociis Theme natoque penatibus et magnis dis. Etiam ultricies nisi vel augue.",
-      "price": 542,
-      "discountPercentage": 12.96,
-      "rating": 4.69,
-      "stock": 54,
-      "brand": "",
-      "category": "Babies",
-      "thumbnail": "https://cocco.qodeinteractive.com/wp-content/uploads/2018/05/shop-10-img.jpg",
-      "images": [
-        "https://cocco.qodeinteractive.com/wp-content/uploads/2018/05/shop-10-img.jpg",
-        "https://cocco.qodeinteractive.com/wp-content/uploads/2018/05/shop-10-gallery-4.jpg",
-        "https://cocco.qodeinteractive.com/wp-content/uploads/2018/05/shop-10-gallery-3.jpg",
-        "https://cocco.qodeinteractive.com/wp-content/uploads/2018/05/shop-10-gallery-2.jpg",
-        "https://cocco.qodeinteractive.com/wp-content/uploads/2018/05/shop-10-gallery-1.jpg"
-      ]
-    },
-    {
       "id": 2,
       "sku": "lfi3ey1r",
       "title": "Suspender Shorts ",
@@ -103,16 +83,15 @@
       ]
     },
     {
-      "id": 5,
       "sku": "lfi3h0z7",
       "title": "Pink Bag",
       "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit nean commodo ligula eget dolor. Aenean massa. Cum sociis Theme natoque penatibus et magnis dis. Etiam ultricies nisi vel augue.",
       "price": 120,
       "discountPercentage": 12.96,
-      "rating": 3.69,
+      "rating": 3,
       "stock": 12,
-      "brand": "",
-      "category": "Accessories",
+      "brand": "Brand",
+      "category": "Boys",
       "thumbnail": "https://cocco.qodeinteractive.com/wp-content/uploads/2018/05/shop-3-img-800x889.jpg",
       "images": [
         "https://cocco.qodeinteractive.com/wp-content/uploads/2018/05/shop-3-img-800x889.jpg",
@@ -120,7 +99,8 @@
         "https://cocco.qodeinteractive.com/wp-content/uploads/2018/05/shop-29-gallery-3.jpg",
         "https://cocco.qodeinteractive.com/wp-content/uploads/2018/05/shop-29-gallery-2.jpg",
         "https://cocco.qodeinteractive.com/wp-content/uploads/2018/05/shop-29-gallery-1.jpg"
-      ]
+      ],
+      "id": 5
     },
     {
       "id": 6,
@@ -505,7 +485,7 @@
     },
     {
       "sku": "lfi2zxp7",
-      "title": "Bath Kit of Towels & Soaps",
+      "title": "Bath Kit of Towels and Soaps",
       "description": "Nam tempus turpis at metus scelerisque placerat nulla deumantos solicitud felis. Pellentesque diam dolor, elementum etos lobortis des mollis ut risus. Sedcus faucibus an sullamcorper mattis drostique des commodo pharetras loremos.Donec pretium egestas sapien et mollis. Sample Unordered List Comodous in tempor ullamcorper miaculis Pellentesque vitae neque mollis urna mattis...\n",
       "price": 500,
       "discountPercentage": 0,
