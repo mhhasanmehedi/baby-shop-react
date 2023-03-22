@@ -6,7 +6,9 @@ import Navbar from "./components/Navbar/Navbar";
 import PrivateRoute from "./components/PrivateRoute";
 import { fetchUsers } from "./features/auth/authSlice";
 import About from "./pages/About";
+import AddCategory from "./pages/AddCategory";
 import AddProduct from "./pages/AddProduct";
+import AllCategory from "./pages/AllCategory";
 import AllProduct from "./pages/AllProduct";
 import Cart from "./pages/Cart";
 import Contact from "./pages/Contact";
@@ -46,6 +48,8 @@ function App() {
         </Route>
         <Route path="/admin/add_product" element={<AddProduct />} />
         <Route path="/admin/all_product" element={<AllProduct />} />
+        <Route path="/admin/add_category" element={<AddCategory />} />
+        <Route path="/admin/all_category" element={<AllCategory />} />
         <Route path="/cart" element={<Cart />} />
         <Route path="/shop" element={<Shop />} />
         <Route path="/contact" element={<Contact />} />

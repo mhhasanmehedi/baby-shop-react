@@ -1,17 +1,29 @@
 import React from "react";
 import { Link, useLocation } from "react-router-dom";
-import { BsBagCheckFill } from "react-icons/bs";
+import { BsFillBagPlusFill } from "react-icons/bs";
+import { BiCategoryAlt } from "react-icons/bi";
+import { FaBoxOpen } from "react-icons/fa";
 
 const sidebarData = [
   {
     title: "Add Product",
     path: "/admin/add_product",
-    icon: <BsBagCheckFill />,
+    icon: <BsFillBagPlusFill />,
   },
   {
     title: "All Product",
     path: "/admin/all_product",
-    icon: <BsBagCheckFill />,
+    icon: <FaBoxOpen />,
+  },
+  {
+    title: "Add Category",
+    path: "/admin/add_category",
+    icon: <BiCategoryAlt />,
+  },
+  {
+    title: "All Category",
+    path: "/admin/all_category",
+    icon: <BiCategoryAlt />,
   },
 ];
 
