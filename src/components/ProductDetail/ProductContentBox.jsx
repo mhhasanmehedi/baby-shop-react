@@ -1,11 +1,25 @@
 import React from "react";
 import { AiFillStar, AiOutlineHeart } from "react-icons/ai";
 import { useDispatch } from "react-redux";
-import ShareButton from "react-share/lib/ShareButton";
+import {
+  FacebookIcon,
+  FacebookShareButton,
+  FacebookShareCount,
+  LinkedinIcon,
+  LinkedinShareButton,
+  PinterestIcon,
+  PinterestShareButton,
+  RedditIcon,
+  RedditShareButton,
+  TwitterIcon,
+  TwitterShareButton,
+} from "react-share";
 import { addToCart } from "../../features/cart/cartSlice";
 
 const ProductContentBox = ({ product }) => {
   const dispatch = useDispatch();
+
+  const shareUrl = "https://mehedihasanrahat.vercel.app/";
 
   return (
     <div>
@@ -60,11 +74,23 @@ const ProductContentBox = ({ product }) => {
       <p className="mt-3">
         <span className="font-bold">SKU:</span> {product.sku}
       </p>
-      <p>
-        <span className="font-bold">
-          Share:
-          <ShareButton socialMedia={"facebook"} url="a;sdf" />
-        </span>
+      <p className="mt-10">
+        <span className="font-bold inline-block mr-4">Share:</span>
+        <FacebookShareButton url={shareUrl}>
+          <FacebookIcon size={32} />
+        </FacebookShareButton>
+        <LinkedinShareButton url={shareUrl}>
+          <LinkedinIcon size={32} />
+        </LinkedinShareButton>
+        <TwitterShareButton url={shareUrl}>
+          <TwitterIcon size={32} />
+        </TwitterShareButton>
+        <PinterestShareButton url={shareUrl}>
+          <PinterestIcon size={32} />
+        </PinterestShareButton>
+        <RedditShareButton url={shareUrl}>
+          <RedditIcon size={32} />
+        </RedditShareButton>
       </p>
     </div>
   );

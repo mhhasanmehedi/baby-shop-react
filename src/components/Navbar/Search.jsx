@@ -14,12 +14,15 @@ const Search = () => {
     e.preventDefault();
   };
   return (
-    <form className="bg-gray-300" onSubmit={handleSubmit}>
+    <form
+      className="border rounded-full flex items-stretch"
+      onSubmit={handleSubmit}
+    >
       <input
         type="text"
         name="search"
         placeholder="Search product"
-        className="border"
+        className="bg-transparent py-2 px-3 outline-none"
         value={search}
         onChange={(e) => {
           dispatch(searched(e.target.value));
@@ -29,7 +32,10 @@ const Search = () => {
           }
         }}
       />
-      <button type="submit">
+      <button
+        className="w-[42px] flex items-center justify-center rounded-full border !bg-gray-300 hover:!bg-pink-600 hover:text-white"
+        type="submit"
+      >
         <AiOutlineSearch />
       </button>
     </form>

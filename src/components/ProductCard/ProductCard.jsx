@@ -14,7 +14,7 @@ const ProductCard = ({ product }) => {
   const { id, thumbnail, title, rating, price } = product;
 
   return (
-    <div className="group border relative">
+    <div className="group border relative bg-white">
       <div className="w-full h-{220px} overflow-hidden ">
         <Link
           to={`/products/${id}`}
