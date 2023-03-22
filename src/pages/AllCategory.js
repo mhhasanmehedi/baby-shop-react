@@ -1,7 +1,10 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import AdminDashboardLayout from "../components/Layout/AdminDashboardLayout";
-import { fetchCategories } from "../features/categories/categoriesSlice";
+import {
+  deleteCategory,
+  fetchCategories,
+} from "../features/categories/categoriesSlice";
 
 const AllCategory = () => {
   const dispatch = useDispatch();
@@ -24,7 +27,12 @@ const AllCategory = () => {
           categories.map((category) => (
             <li className="mb-3">
               {category.title}
-              <button className="bg-gray-900 text-white ml-3">Delete</button>
+              <button
+                onClick={() => dispatch(deleteCategory(category.id))}
+                className="bg-gray-900 text-white ml-3"
+              >
+                Delete
+              </button>
             </li>
           ))}
       </div>

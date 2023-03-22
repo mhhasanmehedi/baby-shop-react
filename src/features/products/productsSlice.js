@@ -56,6 +56,7 @@ const productsSlice = createSlice({
   initialState,
   extraReducers: (builder) => {
     builder
+      // Create Product
       .addCase(fetchProducts.pending, (state) => {
         state.isLoading = true;
         state.isError = false;
@@ -70,6 +71,8 @@ const productsSlice = createSlice({
         state.isError = true;
         state.error = action.error?.message;
       })
+
+      // Create product
       .addCase(createProduct.pending, (state) => {
         state.isError = false;
         state.isLoading = true;
@@ -84,6 +87,8 @@ const productsSlice = createSlice({
         state.isError = true;
         state.error = action.error?.message;
       })
+
+      // Update Product
       .addCase(updateProduct.pending, (state) => {
         state.isError = false;
         state.isLoading = true;
@@ -103,6 +108,8 @@ const productsSlice = createSlice({
         state.isError = true;
         state.error = action.error?.message;
       })
+
+      // Remove Product
       .addCase(removeProduct.pending, (state) => {
         state.isError = false;
         state.isLoading = true;

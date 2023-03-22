@@ -13,6 +13,7 @@ import AllProduct from "./pages/AllProduct";
 import Cart from "./pages/Cart";
 import Contact from "./pages/Contact";
 import Dashboard from "./pages/Dashboard";
+import EditCategory from "./pages/EditCategory";
 import EditProduct from "./pages/EditProduct";
 import Home from "./pages/Home";
 import Orders from "./pages/Orders";
@@ -54,6 +55,10 @@ function App() {
         />
         <Route path="/admin/all_product" element={<AllProduct />} />
         <Route path="/admin/add_category" element={<AddCategory />} />
+        <Route
+          path="/admin/edit_category/:categoryId"
+          element={<EditCategory />}
+        />
         <Route path="/admin/all_category" element={<AllCategory />} />
         <Route path="/cart" element={<Cart />} />
         <Route path="/shop" element={<Shop />} />
