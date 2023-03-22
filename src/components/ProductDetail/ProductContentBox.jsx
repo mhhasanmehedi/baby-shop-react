@@ -4,7 +4,6 @@ import { useDispatch } from "react-redux";
 import {
   FacebookIcon,
   FacebookShareButton,
-  FacebookShareCount,
   LinkedinIcon,
   LinkedinShareButton,
   PinterestIcon,
@@ -19,7 +18,7 @@ import { addToCart } from "../../features/cart/cartSlice";
 const ProductContentBox = ({ product }) => {
   const dispatch = useDispatch();
 
-  const shareUrl = "https://mehedihasanrahat.vercel.app/";
+  const shareUrl = `https://hellobaby.vercel.app/products/${product.id}`;
 
   return (
     <div>

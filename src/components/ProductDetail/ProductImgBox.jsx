@@ -1,7 +1,5 @@
 import React, { useState } from "react";
-// Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
-// Import Swiper styles
 import "swiper/css";
 import "swiper/css/navigation";
 import { Navigation } from "swiper";
@@ -9,7 +7,7 @@ import { Navigation } from "swiper";
 const ProductImgBox = ({ product }) => {
   const [image, setImage] = useState(product.thumbnail);
   return (
-    <div>
+    <div className="lg:w-[480px]">
       <div className="border mb-3">
         <img src={image} alt={product.title} className="w-full h-[508px]" />
       </div>

@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchRelatedProducts } from "../../features/relatedProducts/relatedProductSlice";
+import ProductCard from "../ProductCard/ProductCard";
 import RelatedProductItem from "./RelatedProductItem";
 
 const RelatedProductList = ({ currentProductId, category }) => {
@@ -28,16 +29,16 @@ const RelatedProductList = ({ currentProductId, category }) => {
   }
   if (!isLoading && !isError && relatedProducts?.length > 0) {
     content = relatedProducts.map((product) => (
-      <RelatedProductItem key={product.id} product={product} />
+      <ProductCard key={product.id} product={product} />
     ));
   }
 
   return (
     <>
-      <h3 className="text-center bg-pink-600 text-white p-3 uppercase">
+      <h3 className="text-left border-b mt-[60px] text-3xl pb-3 capitalize">
         Related Products
       </h3>
-      <div className="col-span-full lg:col-auto ">{content}</div>
+      <div className="grid grid-cols-6 gap-5 my-8">{content}</div>
     </>
   );
 };

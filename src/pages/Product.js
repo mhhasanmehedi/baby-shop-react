@@ -39,18 +39,14 @@ const Product = () => {
           category={product.category}
           id={product.id}
         />
-        <div className="flex flex-col lg:flex-row my-4">
-          <div className="lg:flex-[9] grid grid-cols-1 lg:grid-cols-2 gap-5 ">
-            <ProductImgBox product={product} />
-            <ProductContentBox product={product} />
-          </div>
-          <div className="lg:flex-[3] ">
-            <RelatedProductList
-              currentProductId={product.id}
-              category={product.category}
-            />
-          </div>
+        <div className="flex flex-col lg:flex-row gap-10 ">
+          <ProductImgBox product={product} />
+          <ProductContentBox product={product} />
         </div>
+        <RelatedProductList
+          currentProductId={product.id}
+          category={product.category}
+        />
       </div>
     );
 
