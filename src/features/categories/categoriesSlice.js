@@ -1,10 +1,17 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
-import { addCategory, getCategories, removeCategory } from "./categoriesAPI";
+import {
+  addCategory,
+  editCategory,
+  getCategories,
+  getCategory,
+  removeCategory,
+} from "./categoriesAPI";
 
 // initial state
 const initialState = {
   isLoading: false,
   categories: [],
+  category: {},
   isError: false,
   error: "",
 };
@@ -18,11 +25,29 @@ export const fetchCategories = createAsyncThunk(
   }
 );
 
+// fetch category async thunk
+export const fetchCategory = createAsyncThunk(
+  "categories/fetchCategory",
+  async (id) => {
+    const category = await getCategory(id);
+    return category;
+  }
+);
+
 // Create categories async thunk
 export const createCategory = createAsyncThunk(
   "categories/createCategory",
   async (data) => {
     const category = await addCategory(data);
+    return category;
+  }
+);
+
+// Update Category async thunk
+export const updateCategory = createAsyncThunk(
+  "categories/updateCategory",
+  async ({ id, data }) => {
+    const category = await editCategory(id, data);
     return category;
   }
 );
@@ -58,6 +83,21 @@ const categoriesSlice = createSlice({
         state.error = action.error?.message;
       })
 
+      // fetch Category
+      .addCase(fetchCategory.pending, (state) => {
+        state.isLoading = true;
+        state.isError = false;
+      })
+      .addCase(fetchCategory.fulfilled, (state, action) => {
+        state.isLoading = false;
+        state.category = action.payload;
+      })
+      .addCase(fetchCategory.rejected, (state, action) => {
+        state.isLoading = false;
+        state.isError = true;
+        state.error = action.error?.message;
+      })
+
       // Create category
       .addCase(createCategory.pending, (state) => {
         state.isError = false;
@@ -69,6 +109,27 @@ const categoriesSlice = createSlice({
         state.categories.push(action.payload);
       })
       .addCase(createCategory.rejected, (state, action) => {
+        state.isLoading = false;
+        state.isError = true;
+        state.error = action.error?.message;
+      })
+
+      // Update Category
+      .addCase(updateCategory.pending, (state) => {
+        state.isError = false;
+        state.isLoading = true;
+      })
+      .addCase(updateCategory.fulfilled, (state, action) => {
+        state.isLoading = false;
+        state.isError = false;
+
+        const indexToUpdate = state.categories.findIndex(
+          (category) => category.id === action.payload.id
+        );
+
+        state.categories[indexToUpdate] = action.payload;
+      })
+      .addCase(updateCategory.rejected, (state, action) => {
         state.isLoading = false;
         state.isError = true;
         state.error = action.error?.message;

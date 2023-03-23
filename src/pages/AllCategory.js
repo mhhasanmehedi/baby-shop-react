@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
+import { Link } from "react-router-dom";
 import AdminDashboardLayout from "../components/Layout/AdminDashboardLayout";
 import {
   deleteCategory,
@@ -27,6 +28,12 @@ const AllCategory = () => {
           categories.map((category) => (
             <li className="mb-3">
               {category.title}
+              <Link
+                to={`/admin/edit_category/${category.id}`}
+                className="bg-gray-900 text-white ml-3"
+              >
+                Edit
+              </Link>
               <button
                 onClick={() => dispatch(deleteCategory(category.id))}
                 className="bg-gray-900 text-white ml-3"
