@@ -24,7 +24,10 @@ const AllCategory = () => {
       </div>
       <div>
         {isLoading && <div>Loading ...</div>}
-        {categories.length > 0 &&
+        {isError && <div>{error}</div>}
+        {!isLoading &&
+          !isError &&
+          categories.length > 0 &&
           categories.map((category) => (
             <li className="mb-3">
               {category.title}

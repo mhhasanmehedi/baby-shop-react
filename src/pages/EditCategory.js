@@ -1,9 +1,7 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import AdminDashboardLayout from "../components/Layout/AdminDashboardLayout";
-import { fetchProduct } from "../features/product/productSlice";
 import { useParams } from "react-router-dom";
-import EditProductForm from "../components/EditProductForm";
 import { fetchCategory } from "../features/categories/categoriesSlice";
 import EditCategoryForm from "../components/EditCategoryForm";
 
@@ -23,7 +21,7 @@ const EditCategory = () => {
   if (isLoading) content = <div>Loading..</div>;
   if (!isLoading && isError) content = <div>Something is error</div>;
 
-  if (!isLoading && !isError && category)
+  if (!isLoading && !isError && category !== {})
     content = <EditCategoryForm category={category} />;
 
   return (
@@ -31,7 +29,7 @@ const EditCategory = () => {
       <div className="border-b border-dashed text-xl font-semibold pb-2 mb-5">
         Edit Category
       </div>
-      {/* {content} */}
+      {content}
     </AdminDashboardLayout>
   );
 };

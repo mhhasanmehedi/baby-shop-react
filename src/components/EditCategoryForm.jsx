@@ -1,20 +1,19 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { fetchCategories } from "../features/categories/categoriesSlice";
-import { updateProduct } from "../features/products/productsSlice";
+import { updateCategory } from "../features/categories/categoriesSlice";
 
-const EditCategoryForm = ({ product }) => {
-  const { isLoading, isError, error } = useSelector((state) => state.products);
-  const { categories } = useSelector((state) => state.categories);
+const EditCategoryForm = ({ category }) => {
+  const { isLoading, isError, error } = useSelector(
+    (state) => state.categories
+  );
   const dispatch = useDispatch();
 
-  useEffect(() => {
-    dispatch(fetchCategories);
-  }, []);
+  const [title, setTitle] = useState(category.title);
+  const [image, setImage] = useState(category.image);
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    dispatch(updateProduct({ id: product.id, data: { title, image } }));
+    dispatch(updateCategory({ id: category.id, data: { title, image } }));
   };
 
   return (

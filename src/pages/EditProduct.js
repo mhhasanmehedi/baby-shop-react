@@ -18,7 +18,6 @@ const EditProduct = () => {
     dispatch(fetchProduct(productId));
   }, [dispatch, productId]);
 
-  console.log(product);
 
   //   decide what to render
   let content = null;
