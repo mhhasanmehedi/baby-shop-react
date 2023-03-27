@@ -8,7 +8,9 @@ import Search from "./Search";
 
 const NavbarTop = () => {
   const { cartItems } = useSelector((state) => state.carts);
+  const { currentUser } = useSelector((state) => state.users);
 
+  console.log(currentUser);
   const totalPrice = cartItems.reduce(
     (acc, product) => acc + product.price * product.quantity,
     0
@@ -29,8 +31,11 @@ const NavbarTop = () => {
           <Search />
           <div className="flex gap-5">
             <div className="flex items-center">
-              <Link to="/dashboard" className="text-5xl">
-                <BiUser />
+              <Link
+                to="/dashboard"
+                className="h-12 w-12 rounded-full flex items-center justify-center text-white bg-gray-600 mr-1"
+              >
+                {currentUser ? currentUser.name.charAt(0) : <BiUser />}
               </Link>
               <div className="accountInfo">
                 <Link to="/admin/add_product" className="hover:text-pink-600">
@@ -56,7 +61,7 @@ const NavbarTop = () => {
                 </div>
               </div>
 
-              <div className="">
+              <div>
                 Total Price <span className="block">৳ {totalPrice}</span>
               </div>
             </Link>

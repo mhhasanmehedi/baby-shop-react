@@ -11,6 +11,7 @@ import AddProduct from "./pages/AddProduct";
 import AllCategory from "./pages/AllCategory";
 import AllProduct from "./pages/AllProduct";
 import Cart from "./pages/Cart";
+import Checkout from "./pages/Checkout";
 import Contact from "./pages/Contact";
 import Dashboard from "./pages/Dashboard";
 import EditCategory from "./pages/EditCategory";
@@ -26,8 +27,6 @@ import SignIn from "./pages/SignIn";
 import SignUp from "./pages/SignUp";
 
 function App() {
-  const { currentUser, users } = useSelector((state) => state.users);
-
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -47,6 +46,7 @@ function App() {
           <Route path="/dashboard/profile" element={<Profile />} />
           <Route path="/dashboard/orders" element={<Orders />} />
           <Route path="/dashboard/settings" element={<Settings />} />
+          <Route path="/checkout" element={<Checkout />} />
         </Route>
         <Route path="/admin/add_product" element={<AddProduct />} />
         <Route

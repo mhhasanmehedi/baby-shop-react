@@ -19,16 +19,9 @@ const Footer = () => {
         <div className="py-10">
           <div className="flex">
             <div className="flex-[5]">
-              <div className="mb-4 text-xl">Get In Touch</div>
-              <Link to="/" className="logo flex items-center">
-                <img src={Logo} className="h-16 bg-white" alt="Logo Missing" />
-                <div className="font-mono font-bold ml-3 uppercase tracking-[1px]">
-                  Baby Shop
-                  <span className="block tracting-0 lowercase text-pink-400">
-                    Happy Shopping
-                  </span>
-                </div>
-              </Link>
+              <div className="relative mb-4 text-xl after:absolute after:left-0 after:-bottom-1 after:content-[''] after:h-[3px] after:w-[3px] after:rounded after:bg-pink-600 before:absolute before:left-2 before:-bottom-1 before:content-[''] before:h-[3px] before:w-10 before:bg-pink-600">
+                Get In Touch
+              </div>
               <div className="flex flex-col">
                 <p>
                   38 Saheb Ali Road, Sadar, Mymensingh <br />
@@ -62,7 +55,9 @@ const Footer = () => {
             </div>
 
             <div className="flex-[3]">
-              <div className="mb-4 text-xl">My Account</div>
+              <div className="relative mb-4 text-xl after:absolute after:left-0 after:-bottom-1 after:content-[''] after:h-[3px] after:w-[3px] after:rounded after:bg-pink-600 before:absolute before:left-2 before:-bottom-1 before:content-[''] before:h-[3px] before:w-10 before:bg-pink-600">
+                My Account
+              </div>
               <div className="flex flex-col">
                 <Link to="/" className="transition hover:text-pink-700">
                   Track my order
@@ -79,7 +74,9 @@ const Footer = () => {
               </div>
             </div>
             <div className="flex-[3] ">
-              <div className="mb-4 text-xl">Customer Service</div>
+              <div className="relative mb-4 text-xl after:absolute after:left-0 after:-bottom-1 after:content-[''] after:h-[3px] after:w-[3px] after:rounded after:bg-pink-600 before:absolute before:left-2 before:-bottom-1 before:content-[''] before:h-[3px] before:w-10 before:bg-pink-600">
+                Customer Service
+              </div>
               <div className="flex flex-col">
                 <Link to="/" className="transition hover:text-pink-700">
                   Help & Contact Us
@@ -96,7 +93,9 @@ const Footer = () => {
               </div>
             </div>
             <div className="flex-[3] ">
-              <div className="mb-4 text-xl">Usefull Links</div>
+              <div className="relative mb-4 text-xl after:absolute after:left-0 after:-bottom-1 after:content-[''] after:h-[3px] after:w-[3px] after:rounded after:bg-pink-600 before:absolute before:left-2 before:-bottom-1 before:content-[''] before:h-[3px] before:w-10 before:bg-pink-600">
+                Usefull Links
+              </div>
               <div className="flex flex-col">
                 <Link to="/about" className="transition hover:text-pink-700">
                   About Us
