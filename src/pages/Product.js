@@ -1,13 +1,12 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
-import Loading from "../components/Ui/Loading";
 import { fetchProduct } from "../features/product/productSlice";
-
 import BreadCrumb from "../components/ProductDetail/BreadCrumb";
 import ProductImgBox from "../components/ProductDetail/ProductImgBox";
 import ProductContentBox from "../components/ProductDetail/ProductContentBox";
 import RelatedProductList from "../components/RelatedProducts/RelatedProductList";
+import ProductSkeletons from "../components/skeletons/ProductSkeletons";
 
 const Product = () => {
   const { isLoading, isError, error, product } = useSelector(
@@ -24,7 +23,7 @@ const Product = () => {
   }, [dispatch, productId]);
 
   let content = null;
-  if (isLoading) content = <Loading />;
+  if (isLoading) content = <ProductSkeletons />;
   if (!isLoading && isError)
     content = <div className="col-span-12">{error}</div>;
 
@@ -33,7 +32,7 @@ const Product = () => {
 
   if (!isLoading && !isError && product?.id)
     content = (
-      <div className="mx-4 ">
+      <>
         <BreadCrumb
           title={product.title}
           category={product.category}
@@ -47,10 +46,10 @@ const Product = () => {
           currentProductId={product.id}
           category={product.category}
         />
-      </div>
+      </>
     );
 
-  return <div className="container m-auto">{content}</div>;
+  return <div className="container m-auto px-4">{content}</div>;
 };
 
 export default Product;

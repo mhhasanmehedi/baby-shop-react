@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchRelatedProducts } from "../../features/relatedProducts/relatedProductSlice";
+import LoadingProductCard from "../ProductCard/LoadingProductCard";
 import ProductCard from "../ProductCard/ProductCard";
 import RelatedProductItem from "./RelatedProductItem";
 
@@ -20,7 +21,15 @@ const RelatedProductList = ({ currentProductId, category }) => {
   // decide what to render
   let content = null;
 
-  if (isLoading) content = "Loading";
+  if (isLoading)
+    content = (
+      <>
+        <LoadingProductCard />
+        <LoadingProductCard />
+        <LoadingProductCard />
+        <LoadingProductCard />
+      </>
+    );
   if (!isLoading && isError) {
     content = <div className="col-span-12">{error}</div>;
   }
