@@ -4,6 +4,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Footer from "./components/Footer/Footer";
 import Navbar from "./components/Navbar/Navbar";
 import PrivateRoute from "./components/PrivateRoute";
+import PublicRoute from "./components/PublicRoute";
 import { fetchUsers } from "./features/auth/authSlice";
 import About from "./pages/About";
 import AddCategory from "./pages/AddCategory";
@@ -39,15 +40,63 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
-        <Route path="/sign_in" element={<SignIn />} />
-        <Route path="/sign_up" element={<SignUp />} />
-        <Route element={<PrivateRoute />}>
-          <Route element={<Dashboard />} path="/dashboard" />
-          <Route path="/dashboard/profile" element={<Profile />} />
-          <Route path="/dashboard/orders" element={<Orders />} />
-          <Route path="/dashboard/settings" element={<Settings />} />
-          <Route path="/checkout" element={<Checkout />} />
-        </Route>
+        <Route
+          path="/sign_in"
+          element={
+            <PublicRoute>
+              <SignIn />
+            </PublicRoute>
+          }
+        />
+        <Route
+          path="/sign_up"
+          element={
+            <PublicRoute>
+              <SignUp />
+            </PublicRoute>
+          }
+        />
+        <Route
+          path="/dashboard"
+          element={
+            <PrivateRoute>
+              <Dashboard />
+            </PrivateRoute>
+          }
+        />
+        <Route
+          path="/dashboard/profile"
+          element={
+            <PrivateRoute>
+              <Profile />
+            </PrivateRoute>
+          }
+        />
+        <Route
+          path="/dashboard/orders"
+          element={
+            <PrivateRoute>
+              <Orders />
+            </PrivateRoute>
+          }
+        />
+        <Route
+          path="/dashboard/settings"
+          element={
+            <PrivateRoute>
+              <Settings />
+            </PrivateRoute>
+          }
+        />
+        <Route
+          path="/checkout"
+          element={
+            <PrivateRoute>
+              <Checkout />
+            </PrivateRoute>
+          }
+        />
+
         <Route path="/admin/add_product" element={<AddProduct />} />
         <Route
           path={`/admin/edit_product/:productId`}
